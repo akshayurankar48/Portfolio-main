@@ -1,80 +1,89 @@
-import React, { useState, useEffect } from "react";
-import "../App.css";
+import React, { useState, useEffect } from 'react';
+import './Portfolio.css';
 
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
-  const [visible, setVisible] = useState(8);
+  const [hoveredProject, setHoveredProject] = useState(null);
 
   useEffect(() => {
-    fetch("/resumeData.json")
+    fetch('/resumeData.json')
       .then((res) => res.json())
       .then((data) => {
         setProjects(data.portfolio.projects);
       });
   }, []);
 
-  const loadMore = () => {
-    setVisible((preValue) => preValue + 4);
-  };
-
-  const reset = () => {
-    setVisible(8);
-  };
-
   return (
-    <section id="portfolio">
-      <div className="row">
-        <div className="twelve columns collapsed">
-          <h1>Check Out Some of My Works.</h1>
+    <section id='portfolio' className='h-auto'>
+      <h1 className=''>Check Out Some of My Works.</h1>
 
-          <div
-            id="portfolio-wrapper"
-            className="bgrid-quarters s-bgrid-thirds cf"
-          >
-            {projects &&
-              projects.slice(0, visible).map((project) => (
-                <div key={project.title} className="columns portfolio-item">
-                  <div className="item-wrap">
-                    <a
-                      href={project.url}
-                      title={project.title}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <img
-                        alt={project.title}
-                        src={`images/portfolio/${project.image}`}
-                      />
-                      <div className="overlay">
-                        <div className="portfolio-item-meta">
-                          <h5>{project.title}</h5>
-                          <p>{project.category}</p>
-                        </div>
-                      </div>
-                      <div className="link-icon">
-                        <i className="fa fa-link"></i>
-                      </div>
-                    </a>
-                  </div>
+      <div
+        className='hideScrollbar'
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'flex-start',
+          margin: '0 40px',
+          overflowX: 'scroll',
+          overflowY: 'hidden',
+          width: '95%',
+          whiteSpace: 'nowrap',
+          scrollbarWidth: 'none', // Hide the scrollbar for Firefox
+          '-ms-overflow-style': 'none', // Hide the scrollbar for IE and Edge
+        }}
+      >
+        {projects &&
+          projects.map((project) => (
+            <div
+              key={project.title}
+              style={{
+                flex: '0 0 auto', // Prevents items from stretching
+                height: '320px',
+                width: '200px',
+                backgroundColor: project.bgColor,
+                margin: '0 10px', // Adds some space between items
+                cursor: 'pointer',
+                position: 'relative',
+                display: 'flex', // Center the image
+                justifyContent: 'center', // Center the image
+                alignItems: 'center', // Center the image
+              }}
+              onClick={() => window.open(project.url, '_blank')}
+              onMouseEnter={() => setHoveredProject(project.title)}
+              onMouseLeave={() => setHoveredProject(null)}
+            >
+              <img
+                src={`images/portfolio/${project.image}`}
+                alt=''
+                style={{
+                  height: '120px',
+                  width: '120px',
+                  objectFit: 'contain',
+                }}
+              />
+              {hoveredProject === project.title && (
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: '0',
+                    left: '0',
+                    width: '100%',
+                    background: 'rgba(0, 0, 0, 0.5)',
+                    color: '#fff',
+                    padding: '8px',
+                    boxSizing: 'border-box',
+                    fontSize: '14px',
+                    fontWeight: 'bold',
+                    wordWrap: 'break-word',
+                    whiteSpace: 'normal',
+                  }}
+                >
+                  {project.title}
                 </div>
-              ))}
-          </div>
-          <div className="div-loadMore">
-            {visible >= projects.length ? (
-              <a
-                onClick={reset}
-                className="smoothscroll loadMore button"
-                href="#portfolio"
-              >
-                Show Less
-              </a>
-            ) : (
-              <button onClick={loadMore} className="loadMore button">
-                Show More
-              </button>
-            )}
-          </div>
-        </div>
+              )}
+            </div>
+          ))}
       </div>
     </section>
   );

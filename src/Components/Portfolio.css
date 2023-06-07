@@ -1,0 +1,17 @@
+.hideScrollbar {
+  overflow: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hideScrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hideScrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.hideScrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+}

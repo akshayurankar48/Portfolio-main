@@ -87,58 +87,60 @@
   "portfolio": {
     "projects": [
       {
-        "title": "Netflix Clone (React JS, Redux & Stripe )",
+        "title": "Movix (React JS, Redux)",
         "category": "",
-        "image": "netflix.jpg",
-        "url": "https://netflix-clone-yt-c35bd.web.app/profile/"
+        "image": "movix.svg",
+        "bgColor": "#f89e00",
+        "url": "https://64800d4f92d1102d288dcc08--iridescent-chimera-da905e.netlify.app/"
       },
       {
-        "title": "Airbnb Clone (React JS",
+        "title": "Airbnb Clone (React JS)",
         "category": "",
-        "image": "airbnb.jpg",
+        "image": "airbnb.svg",
+        "bgColor": "#fff",
         "url": "https://airbnb-youtube-90pl3mz4w-evilieswithin.vercel.app/"
       },
       {
-        "title": "Cloud Management (Tailwind CSS)",
+        "title": "E-Commerce Dashboard (Next JS, Tailwind CSS)",
         "category": "",
-        "image": "cloud.jpg",
-        "url": "https://cloud-react-41h0qc74s-evilieswithin.vercel.app/"
+        "image": "dashboard.svg",
+        "bgColor": "rgb(3, 201, 215)",
+        "url": "https://64801f15cb84fb30443021d9--strong-cassata-1702b5.netlify.app/"
       },
       {
-        "title": "Snapchat Clone (React JS & Redux)",
+        "title": "Gerich (React JS & Tailwind CSS)",
         "category": "",
-        "image": "snapchat.jpg",
-        "url": "https://snapchat-clone-yt-4c2b9.web.app/"
+        "image": "gerich.svg",
+        "bgColor": "#dcca87",
+        "url": "https://gerich-restaurant-one.vercel.app/"
       },
       {
         "title": "Facebook Clone (React JS & Redux)",
         "category": "",
-        "image": "facebook.jpg",
+        "image": "fb.svg",
+        "bgColor": "#2e81f4",
         "url": "https://facebook-clone-yt-f37d1.web.app//"
       },
       {
-        "title": "Slack Clone (React JS & Redux)",
+        "title": "Evo Gym (Next JS & Typescript)",
         "category": "",
-        "image": "slack.jpg",
-        "url": "https://slack-clone-yt-abbf8.web.app/"
+        "image": "evogym.png",
+        "bgColor": "rgb(255 225 224)",
+        "url": "https://gym-landing-page-brown.vercel.app/"
       },
       {
         "title": "Data Finance (React JS & Tailwind CSS)",
         "category": "",
-        "image": "data.jpg",
+        "image": "cloud.svg",
+        "bgColor": "rgb(0 223 154)",
         "url": "https://data-finance-659sh8lvp-evilieswithin.vercel.app/"
       },
       {
         "title": "Google Clone (Next JS, Redux & Tailwind CSS )",
         "category": "",
-        "image": "google.jpg",
+        "image": "google.svg",
+        "bgColor": "#fff",
         "url": "https://google-clone-kiv69d4s5-evilieswithin.vercel.app/"
-      },
-      {
-        "title": "Linked In Clone (React & Redux )",
-        "category": "",
-        "image": "linkedin.jpg",
-        "url": "https://linkedin-clone-yt-a0a25.web.app/"
       }
     ]
   },
