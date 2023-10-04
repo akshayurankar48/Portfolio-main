@@ -29,7 +29,6 @@ import {
   accenture,
   metaversus,
   liva,
-  nike,
   marmeto,
   pesto,
   brighterDays,

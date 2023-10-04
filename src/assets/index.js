@@ -39,7 +39,6 @@ import metaversus from './metaversus.gif';
 import liva from './liva.gif';
 import gymLanding from './gymLanding.png';
 import brighterDays from './brighterdays.png';
-import nike from './nike.gif';
 import jobit from './jobit.png';
 import tripguide from './tripguide.png';
 
