@@ -79,7 +79,6 @@ export {
   metaversus,
   eye,
   liva,
-  nike,
   marmeto,
   pesto,
   brighterDays,
